@@ -6,7 +6,6 @@ import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import routes from './routes';
 import createApolloClient from './createApolloClient';
 import Document from './Document';
-// import cors from 'cors';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
@@ -14,7 +13,6 @@ const server = express();
 server
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
-  // .use(cors())
   .get('/*', async (req, res) => {
     const client = createApolloClient({ ssrMode: true });
 
