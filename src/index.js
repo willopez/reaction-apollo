@@ -1,6 +1,8 @@
+
 import app from './server';
 import http from 'http';
 
+  console.log('endpoint', process.env.GRAPHQL_ENDPONT);
 const server = http.createServer(app);
 
 let currentApp = app;

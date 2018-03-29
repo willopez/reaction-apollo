@@ -1,24 +1,32 @@
-.Profile {
+.app {
   text-align: center;
 }
 
-.Profile-header {
+.header {
   background-color: #a7edff;
   height: 100px;
   padding: 20px;
   color: black;
 }
 
-.Profile-intro {
+.intro {
   font-size: large;
   padding-top: 20px;
 }
 
-.Profile-resources {
+.list {
   list-style: none;
 }
 
-.Profile-resources > li {
-  display: inline-block;
+.list > li {
   padding: 1rem;
+  text-decoration: none;
+}
+
+.selected {
+  color: red;
+}
+
+menu a {
+  margin: 0 10px;
 }

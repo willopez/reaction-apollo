@@ -6,6 +6,7 @@ import { ApolloProvider, getDataFromTree } from 'react-apollo';
 import routes from './routes';
 import createApolloClient from './createApolloClient';
 import Document from './Document';
+import util from 'util';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
@@ -36,6 +37,7 @@ server
       });
       res.send(html);
     } catch (error) {
+      console.log(util.inspect(error, { showHidden: false, depth: null}));
       res.json(error);
     }
   });

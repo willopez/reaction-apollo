@@ -7,10 +7,10 @@ function createApolloClient({ ssrMode }) {
   return new ApolloClient({
     ssrMode,
     link: createHttpLink({
-      uri: 'http://localhost:3030/graphql',
+      uri: 'http://localhost:3000/graphql-alpha',
       credentials: 'same-origin',
       headers: {
-        "meteor-login-token" : 'QUWAgyOdBsgCJIge60BGH4YY0Xowu4KHmuOuq4WuhFX'
+        "meteor-login-token": 'mCiXrhxOGKCT6dGGFJbF2As-4Buo_l-vlsWM79pO3wh'
       },
       fetch,
     }),
