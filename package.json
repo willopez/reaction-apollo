@@ -18,12 +18,17 @@
     "graphql": "^0.13.1",
     "graphql-tag": "^2.8.0",
     "isomorphic-fetch": "^2.2.1",
+    "jss": "^9.8.1",
+    "material-ui": "^1.0.0-beta.39",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "prop-types": "^15.6.1",
     "raf": "^3.4.0",
     "razzle": "^0.8.11",
     "react": "^16.2.0",
     "react-apollo": "^2.1.0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
+    "react-jss": "^8.3.5",
     "react-router-dom": "^4.2.2"
   }
 }

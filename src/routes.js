@@ -1,5 +1,5 @@
-import Profile from './components/profile';
-import Groups from './components/groups';
+import Profile from './pages/profile';
+import Groups from './pages/groups';
 
 export default [
   {

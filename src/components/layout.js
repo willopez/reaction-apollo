@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Menu from './menu';
-import "./app.css";
+import "../app.css";
 
 export default ({ children }) => (
   <div className="app">

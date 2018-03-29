@@ -1,7 +1,11 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import Layout from './layout';
+import Button from 'material-ui/Button';
+import Typography from 'material-ui/Typography';
+
+import withRoot from '../components/withRoot';
+import Layout from '../components/layout';
 
 const GROUPS_QUERY = gql`
 query GroupsQuery($after: ConnectionCursor) {
@@ -35,7 +39,9 @@ const Groups = ({ groups, onLoadMore }) => {
         </li>
       ))}
       </ul>
-      <button onClick={onLoadMore}>Load More</button>
+      <Button disableRipple variant="raised" color="primary" onClick={onLoadMore}>
+        Load More
+      </Button>
     </div>
   )
 }
@@ -43,12 +49,14 @@ const Groups = ({ groups, onLoadMore }) => {
 const GroupsWithData = () => (
   <Query query={GROUPS_QUERY}>
     {({ data: { groups }, loading, fetchMore }) => {
-      const { edges } = groups;
+      const { edges } = groups || [];
       
 
       return (
         <Layout>
-          <h4>Cursor Pagination with GraphQL</h4>
+          <Typography variant="display1" gutterBottom>
+            Cursor Pagination with GraphQL
+          </Typography>
           <Groups
             groups={edges || []}
             onLoadMore={() =>
@@ -80,4 +88,4 @@ const GroupsWithData = () => (
   </Query>
 );
 
-export default GroupsWithData;
+export default withRoot(GroupsWithData);
